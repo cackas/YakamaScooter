@@ -1,0 +1,324 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 10px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Roboto', sans-serif
+	overflow-x: hidden
+	color: $text
+ul
+	padding: 0
+	margin: 0
+	list-style: none
+a, a:active, a:hover
+	text-decoration: none
+	color: $text
+// Custom Sass / Remove before use
+.accent-color
+	color: $accent
+.flex
+	display: flex
+.flex--row
+	flex-direction: row
+.flex--column
+	flex-direction: column
+
+.img-responsive
+	width: 100%
+	height: auto
+
+.header
+	padding: 1.87vw 2.7vw
+	align-items: center
+	justify-content: space-between
+.logo
+	width: 12.4vw
+.menu
+	li
+		margin-right: 2.7vw
+		&:last-child
+			margin-right: 0
+		a
+			font-family: 'MontserratMedium'
+			font-size: 1.1vw
+			line-height: 1.38vw
+			&:hover
+				color: $accent
+.btn
+	padding: .97vw 1.67vw
+	border-radius: .48vw
+	background-color: rgba(138, 194, 73, 0.07)
+	color: $accent
+	font-family: 'MontserratBold'
+	font-size: .97vw
+	line-height: 1.25vw
+	&:hover
+		background-color: $accent
+		color: #fff
+
+.btn--inverse
+	background-color: $accent
+	color: #fff
+	&:hover
+		box-shadow: 0px 0px .88vw 0px rgba($accent, 0.75)
+.btns-wrap
+	.btn
+		margin-right: 1vw
+		&:last-child
+			margin-right: 0
+
+.header-slider
+	padding: 4.1vw 0 8.2vw
+	margin: 0 4.1vw
+	position: relative
+	align-items: center
+	justify-content: space-around
+	background-image: url('../img/@1x/bg.png')
+	background-size: 107% auto
+	background-position: 80% 100%
+	background-repeat: no-repeat
+.header-slider__left
+	max-width: 16.4vw
+.header-slider__right
+	width: 52.3vw
+#header-slider, #models-slider
+	width: 100%
+.header-slider__title
+	font-family: 'Roboto'
+	font-style: normal
+	font-weight: bold
+	font-size: .83vw
+	line-height: 1.38vw
+	text-transform: uppercase
+	letter-spacing: 0.07em
+	margin-bottom: .66vw
+.header-slider__subtitle
+	font-family: 'MontserratSemiBold'
+	font-size: 2.5vw
+	line-height: 3.3vw
+	margin-bottom: 4.4vw
+.header-slider__link
+	font-family: 'MontserratSemiBold'
+	font-size: .97vw
+	line-height: 1.25vw
+.social-links
+	position: absolute
+	top: 44%
+	left: 0
+	transform: rotate(-90deg) translateY(-4.5vw)
+	opacity: .15
+	text-transform: uppercase
+	a
+		font-size: .69vw
+		line-height: 1.67vw
+		margin-right: 2vw
+		letter-spacing: 0.07em
+		font-family: 'MontserratRegular'
+		&:last-child
+			margin-right: 0
+.scroll-btn
+	position: absolute
+	bottom: 3vw
+	left: 0
+	align-items: center
+	img
+		width: .9vw
+		height: auto
+		margin-bottom: .27vw
+	span
+		font-family: 'MontserratRegular'
+		font-size: .55vw
+		line-height: .69vw
+		letter-spacing: 0.07em
+		text-transform: uppercase
+		opacity: .15
+.header-slider__right
+	.slick-dots
+		transform: translateY(4.1vw)
+		li button:before
+			font-size: calc(3px + 0.15vw)
+		li.slick-active
+			width: 1.53vw
+			& button
+				width: 1.53vw
+				&:before
+					content: ''
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					color: $accent
+					background-color: $accent
+					border-radius: .5vw
+					width: 1.53vw
+					height: .36vw
+.about
+	padding: 20.8vw 12.9vw 18.75vw
+	align-items: flex-end
+	background-image: url('../img/@1x/about-bg.svg')
+	background-repeat: no-repeat
+	background-size: 100% auto
+	min-height: 54.7vw
+.about__content-wrap
+	width: 30.7vw
+	color: #fff
+.about__title
+	font-family: 'MontserratBold'
+	font-size: 2.5vw
+	line-height: 3.3vw
+	margin-bottom: 2.1vw
+.about__content
+	font-family: 'MontserratMedium'
+	font-size: 1.1vw
+	line-height: 1.9vw
+.models
+	padding: 8.4vw 0 0
+	margin: 0 0 0 13.4vw
+.models__right
+	width: 46.1vw
+	position: relative
+.models__left
+	width: 27vw
+	margin-right: 11.25vw
+.tabs-wrap
+	cursor: pointer
+	font-size: .97vw
+	line-height: 1.25vw
+	font-family: 'MontserratBold'
+.scooter
+	border-top-right-radius: 0
+	border-bottom-right-radius: 0
+.el-scooter
+	border-top-left-radius: 0
+	border-bottom-left-radius: 0
+.tabs-wrap
+	margin-bottom: 4.2vw
+.models__title
+	font-family: 'MontserratBold'
+	font-size: 2.5vw
+	line-height: 3.3vw
+	margin-bottom: 2.1vw
+.models__content
+	font-family: 'MontserratLight'
+	font-size: 1.1vw
+	line-height: 1.9vw
+	margin-bottom: 5.5vw
+.models__slider-nav
+	justify-content: space-between
+.models__numbers
+	font-family: 'MontserratSemiBold'
+	font-size: 1.1vw
+	line-height: 1.9vw
+	align-items: center
+	opacity: .45
+	span
+		display: block
+.left, .right
+	width: 1.87vw
+.left
+	margin-right: 2.1vw
+.tab
+	width: 5vw
+	margin: 0 1vw
+	display: inline-block
+	height: 1px
+	background-color: #000
+	opacity: .45
+.bag
+	padding: 19.7vw 9.9vw 14.4vw 12.5vw
+	justify-content: space-between
+	background-image: url('../img/@1x/bag-bg.png')
+	background-size: 100% 100%
+	background-repeat: no-repeat
+.bag__left
+	width: 31vw
+.bag__right
+	width: 33.4vw
+.counter__title
+	font-family: 'RobotoBold'
+	text-transform: uppercase
+	margin-bottom: .69vw
+	opacity: .45
+	letter-spacing: 0.07em
+.counter
+	margin-bottom: 2.78vw
+.numb
+	margin-right: .69vw
+	align-items: center
+	&:last-child
+		margin-right: 0
+.green-circle
+	border-radius: .48vw
+	width: fit-content
+	font-family: 'MontserratBold'
+	font-size: 1.67vw
+	line-height: 2vw
+	padding: .2vw .48vw
+	color: $accent
+	background-color: rgba(138, 194, 73, 0.15)
+	margin-bottom: .277vw
+.numb__name
+	font-family: 'MontserratBold'
+	font-size: .55vw
+	line-height: .69vw
+.loan
+	padding: 2.4vw 9.9vw 0 12.5vw
+	justify-content: space-between
+.loan__right
+	width: 32.5vw
+.map__content
+	margin-bottom: 2.78vw
+.info
+	margin-right: 2.36vw
+.info--margin
+	margin-bottom: 2vw
+.info__title
+	font-family: 'MontserratBold'
+	font-size: .69vw
+	line-height: .83vw
+	text-transform: uppercase
+	margin-bottom: .97vw
+	opacity: .3
+.info__content
+	font-family: 'MontserratMedium'
+	font-size: .97vw
+	line-height: 1.67vw
+.info-wrap
+	margin-bottom: 4.1vw
+.map
+	padding: 21.4vw 17.4vw 9.8vw 14.8vw
+	background-image: url('../img/@1x/map-bg.png')
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	justify-content: space-between
+.map__right
+	width: 25.9vw
+.map__left
+	width: 27.7vw
+	height: 27.7vw
+	border-radius: 50%
+	overflow: hidden
+	&>iframe
+		width: 100%
+		height: 100%
+.rights
+	font-family: 'MontserratMedium'
+	font-size: 1.1vw
+	line-height: 1.38vw
