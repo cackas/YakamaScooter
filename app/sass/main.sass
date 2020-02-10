@@ -8,7 +8,8 @@
 ::selection
 	background-color: $accent
 	color: #fff
-
+*
+	outline: none
 input, textarea
 	outline: none
 	&:focus:required:invalid
@@ -32,6 +33,12 @@ a, a:active, a:hover
 	text-decoration: none
 	color: $text
 // Custom Sass / Remove before use
+.hidden
+	display: none
+.invisible
+	position: fixed
+	top: 100%
+	opacity: 0
 .accent-color
 	color: $accent
 .flex
@@ -99,7 +106,7 @@ a, a:active, a:hover
 	max-width: 16.4vw
 .header-slider__right
 	width: 52.3vw
-#header-slider, #models-slider
+#header-slider, #models-slider, #models-slider-citikoko
 	width: 100%
 .header-slider__title
 	font-family: 'Roboto'
@@ -194,6 +201,8 @@ a, a:active, a:hover
 .models__right
 	width: 46.1vw
 	position: relative
+.model-slider
+	width: 46.1vw !important
 .models__left
 	width: 27vw
 	margin-right: 11.25vw
@@ -232,6 +241,7 @@ a, a:active, a:hover
 		display: block
 .left, .right
 	width: 1.87vw
+	cursor: pointer
 .left
 	margin-right: 2.1vw
 .tab
@@ -241,6 +251,16 @@ a, a:active, a:hover
 	height: 1px
 	background-color: #000
 	opacity: .45
+.img-wrap
+	cursor: pointer
+.popup-wrap
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	width: 100%
+	min-height: 55.5vw
+	background-color: #fff
 .bag
 	padding: 19.7vw 9.9vw 14.4vw 12.5vw
 	justify-content: space-between
@@ -322,3 +342,100 @@ a, a:active, a:hover
 	font-family: 'MontserratMedium'
 	font-size: 1.1vw
 	line-height: 1.38vw
+//Styles popup
+.popup-wrap
+	display: none
+.popup
+	position: relative
+	padding: 5.6vw 8.3vw 4.2vw
+	justify-content: space-between
+	align-items: center
+.popup-close
+	position: absolute
+	top: 2.78vw
+	right: 2.78vw
+	width: 1.39vw
+	height: 1.39vw
+	cursor: pointer
+.popup__left
+	width: 29.1vw
+	align-items: center
+	position: relative
+.popup__right
+	width: 48.6vw
+.popup-slider
+	width: 29.1vw
+	margin-bottom: 1vw
+.popup-slider-nav
+	width: 24.3vw
+	.img-wrap
+		margin: 0 .34vw
+.popup-left, .popup-right
+	position: absolute
+	bottom: 1.39vw
+	cursor: pointer
+.popup-left
+	left: 0
+.popup-right
+	right: 0
+.popup__title
+	font-family: 'MontserratSemiBold'
+	font-size: 2.5vw
+	line-height: 3.3vw
+	margin-bottom: 4.2vw
+	span
+		font-family: 'MontserratBold'
+.popup__info-wrap
+	justify-content: space-between
+	margin-bottom: 4.1vw
+.key-wrap
+	margin-bottom: 1.39vw
+.key
+	width: 10vw
+	margin-right: 2.7vw
+	font-family: 'MontserratRegular'
+	font-size: .97vw
+	line-height: 1.1vw
+	opacity: .5
+.value
+	font-family: 'MontserratMedium'
+	font-size: .97vw
+	line-height: 1.1vw
+.color-price-wrap
+	margin-bottom: 4.1vw
+	justify-content: space-between
+	align-items: center
+.colors-wrap
+	input
+		display: none
+		&:checked +label
+			box-shadow: 0px 0px 0px 1px rgba($accent, 1)
+	label
+		display: block
+		width: calc(2px + 2vw)
+		height: calc(2px + 2vw)
+		border: 2px solid #fff
+		border-radius: 50%
+		margin-bottom: 0
+		margin-right: 1.39vw
+		cursor: pointer
+		&:hover			
+			box-shadow: 0px 0px 0px 1px rgba($accent, .5)
+		&:last-child
+			margin-right: 0
+.price
+	font-family: 'MontserratBold'
+	font-size: 3.33vw
+	line-height: 3.33vw
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		width: 2vw
+		height: 2.4vw
+		right: calc(100% + .69vw)
+		top: 50%
+		transform: translateY(-50%)
+		background-image: url('../img/@2x/Union.png')
+		background-size: 100% 100%
+		background-repeat: no-repeat

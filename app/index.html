@@ -63,8 +63,8 @@
 	<section class="models flex flex--row">
 		<div class="models__left flex flex--column">
 			<div class="tabs-wrap flex flex--row">
-				<div class="scooter btn btn--inverse">Электросамокаты</div>
-				<div class="el-scooter btn">Ситикоко</div>
+				<div id="scooter" class="tab-btn scooter btn btn--inverse">Электросамокаты</div>
+				<div id="citikoko" class="tab-btn el-scooter btn">Ситикоко</div>
 			</div>
 			<div class="models__title">Все модели <span class="accent-color">2020</span></div>
 			<div class="models__content">
@@ -79,12 +79,41 @@
 			</div>
 		</div>
 		<div class="models__right">
-			<div id="models-slider">
-				<img src="img/@1x/scooter1.png" alt="">
-				<img src="img/@1x/scooter2.png" alt="">
-				<img src="img/@1x/scooter3.png" alt="">
-				<img src="img/@1x/scooter4.png" alt="">
-				<img src="img/@1x/scooter5.png" alt="">
+			<div id="models-slider" class="model-slider scooters">
+				<div class="img-wrap"
+					data-material="iron"
+					data-wheel-size="8"
+					data-speed="25"
+					data-power="350"
+					data-front-brake="recur"
+					data-back-brake="foot"
+					data-batary="36"
+					data-front-amm="default"
+					data-back-amm="pruzh"
+					data-light="led"
+					data-display="true"
+					data-stop-signal="true"
+					data-lights="true"
+					data-max-weight="120kg"
+					data-type="skladnoy"
+					data-weigth="14kg"
+				>
+					<img class="img-responsive" src="img/@1x/scooter1.png" alt="">
+				</div>
+				<div class="img-wrap">
+					<img class="img-responsive" src="img/@1x/scooter2.png" alt="">
+				</div>
+				<div class="img-wrap">
+					<img class="img-responsive" src="img/@1x/scooter3.png" alt="">
+				</div>
+			</div>
+			<div id="models-slider-citikoko" class="model-slider citikokos invisible">
+				<div class="img-wrap">
+					<img class="img-responsive" src="img/@1x/scooter4.png" alt="">
+				</div>
+				<div class="img-wrap">
+					<img class="img-responsive" src="img/@1x/scooter5.png" alt="">
+				</div>
 			</div>
 		</div>
 	</section>
@@ -157,6 +186,141 @@
 		<a href="#" class="logo"><img src="img/@1x/logo.svg" alt="YamahaScooter" class="img-responsive"></a>
 		<div class="rights">All rights reserved @ 2020 YAKAMA</div>
 	</footer>
+	<div class="popup-wrap">
+		<div class="popup flex flex--row">
+			<img class="popup-close" src="img/@2x/close.png" alt="">
+			<div class="popup__left flex flex--column">				
+				<div class="popup-slider">
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+				</div>								
+				<div class="popup-slider-nav">
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+					<div class="img-wrap">
+						<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+					</div>
+				</div>
+				<img class="popup-left" src="img/@2x/left.png" alt="">
+				<img class="popup-right" src="img/@2x/right.png" alt="">
+			</div>
+			<div class="popup__right">
+				<form action="">					
+					<div class="popup__title">AP-H008-13 <span class="accent-color">YAKAMA</span></div>
+					<input type="hidden" value="AP-H008-13 Yakama">
+					<div class="popup__info-wrap flex flex--row">
+						<div class="column_1">
+							<div class="key-wrap flex flex--row">
+								<div class="key">Материал корпуса</div>
+								<div class="value">алюминиевый сплав</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Размер шин</div>
+								<div class="value">8 дюймов</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Максимальная скорость</div>
+								<div class="value">25 км / ч</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Номинальная мощность мотора</div>
+								<div class="value">350 Вт</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Передние тормоза</div>
+								<div class="value">рекурперация</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Задние тормоза</div>
+								<div class="value">ножной </div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Батарея</div>
+								<div class="value">36 В, 5,2 Ач</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Передний аммортизатор</div>
+								<div class="value">обычный</div>
+							</div>
+						</div>
+						<div class="column_2">
+							<div class="key-wrap flex flex--row">
+								<div class="key">Задний аммортизатор</div>
+								<div class="value">пружинный</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Фара</div>
+								<div class="value">LED</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Дисплей</div>
+								<div class="value">есть</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Стоп сигнал</div>
+								<div class="value">есть</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Подсветка</div>
+								<div class="value">есть</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Максимальная нагрузка</div>
+								<div class="value">120кг</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Тип</div>
+								<div class="value">складной</div>
+							</div>
+							<div class="key-wrap flex flex--row">
+								<div class="key">Вес</div>
+								<div class="value">14кг</div>
+							</div>							
+						</div>
+					</div>
+					<div class="color-price-wrap flex flex--row">
+						<div class="colors-wrap flex flex--row">
+							<input type="radio" name="color" id="color-1" value="lazur">
+							<label for="color-1" style="background-color:cyan;"></label>
+							<input type="radio" name="color" id="color-2" value="blue">
+							<label for="color-2" style="background-color: blue;"></label>
+							<input type="radio" name="color" id="color-3" value="black">
+							<label for="color-3" style="background-color: black;"></label>
+							<input type="radio" name="color" id="color-4" value="grey">
+							<label for="color-4" style="background-color: grey;"></label>
+							<input type="radio" name="color" id="color-5" value="red">
+							<label for="color-5" style="background-color: red;"></label>
+						</div>
+						<div class="price">670</div>
+					</div>
+					<input type="submit" class="btn btn--inverse" value="Заказать электросамокат" style="border:none">
+				</form>
+			</div>
+		</div>
+	</div>
 	<script src="js/scripts.min.js"></script>
 
 </body>
