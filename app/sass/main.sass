@@ -527,3 +527,37 @@ a, a:active, a:hover
 	width: 1.08vw
 	height: 1.08vw
 	cursor: pointer
+//Scroll btn
+#scroll-btn
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translate(-50%, -30%)
+  width: 2vw
+  height: 3.4vw
+  border: 1px solid white
+  background-color: $accent
+  border-radius: 3.4vw
+  opacity: 1
+  &:before
+    content: ''
+    position: absolute
+    top: .55vw
+    left: 50%
+    transform: translate(-50%, 0)
+    width: 2px
+    height: .69vw
+    background-color: white
+    animation: scrollDown 2s infinite
+
+@keyframes scrollDown
+  0%
+    opacity: 0
+    transform: translate(-50%, 0)
+
+  30%
+    opacity: 1
+
+  100%
+    opacity: 0
+    transform: translate(-50%, 22px)
