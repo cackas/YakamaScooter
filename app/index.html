@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+<div class="header-wrap">
 	<header class="header flex flex--row">
 		<a href="#" class="logo"><img src="img/@1x/logo.svg" alt="YamahaScooter" class="img-responsive"></a>
 		<ul class="menu flex flex--row">
@@ -34,9 +34,9 @@
 	</header>
 	<section class="header-slider flex flex--row">
 		<div class="header-slider__left">
-			<div class="header-slider__title">Электросамокаты <span class="accent-color">YAKAMA</span></div>
-			<div class="header-slider__subtitle">Прокатимся<br><span class="accent-color">с ветерком!</span></div>
-			<a href="#" class="header-slider__link">Посмотреть все модели</a>
+			<div class="yakama-logo header-slider__title">Электросамокаты <span class="inline-block accent-color">YAK<span class="down-letter">A</span>MA</span></div>
+			<div class="header-slider__subtitle">Прокатимся<br><span class="accent-color accent-shadow">с ветерком!</span></div>
+			<a href="#" class="header-slider__link">Посмотреть все модели <span class="arrow">→</span></a>
 		</div>
 		<div class="header-slider__right">
 			<div id="header-slider">
@@ -54,9 +54,10 @@
 		<a href="#" class="scroll-btn flex flex--column"><img src="img/@1x/scroll.png" alt=""><span>scroll</span></a>
 
 	</section>
+</div>
 	<section class="about flex flex--column">
 		<div class="about__content-wrap flex flex--column">
-			<div class="about__title">О компании <span class="accent-color">YAKAMA</span></div>
+			<div class="about__title">О компании <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
 			<div class="about__content">Мы разработали нашу продукцию, чтобы она была самой безопасной, плавной и волнующей. С превосходным ускорением, комфортной подвеской, авиационными материалами и безопасностью.</div>
 		</div>
 	</section>
@@ -66,12 +67,12 @@
 				<div id="scooter" class="tab-btn scooter btn btn--inverse">Электросамокаты</div>
 				<div id="citikoko" class="tab-btn el-scooter btn">Ситикоко</div>
 			</div>
-			<div class="models__title">Все модели <span class="accent-color">2020</span></div>
+			<div class="models__title">Все модели <span class="accent-color accent-shadow">2020</span></div>
 			<div class="models__content">
 				Наш продукт не похож ни на один, который вы видели раньше, единственный, который вам когда-либо понадобится.
 			</div>
 			<div class="models__slider-nav flex flex--row">
-				<div class="models__numbers flex flex--row"><span>01</span><span class="tab"></span><span>06</span></div>
+				<div class="models__numbers flex flex--row"><span id="slider-current">01</span><span class="tab"></span><span id="slider-length">06</span></div>
 				<div class="models__arrows">
 					<img src="img/@1x/left.png" alt="" class="left">
 					<img src="img/@1x/right.png" alt="" class="right">
@@ -79,7 +80,7 @@
 			</div>
 		</div>
 		<div class="models__right">
-			<div id="models-slider" class="model-slider scooters">
+			<div id="models-slider" class="model-slider scooters" data-number="0">
 				<div class="img-wrap"
 					data-material="iron"
 					data-wheel-size="8"
@@ -107,7 +108,7 @@
 					<img class="img-responsive" src="img/@1x/scooter3.png" alt="">
 				</div>
 			</div>
-			<div id="models-slider-citikoko" class="model-slider citikokos invisible">
+			<div id="models-slider-citikoko" class="model-slider citikokos invisible" data-number="0">
 				<div class="img-wrap">
 					<img class="img-responsive" src="img/@1x/scooter4.png" alt="">
 				</div>
@@ -143,16 +144,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="about__title bag__title">Фирменная сумка-чехол<br><span class="accent-color">в подарок</span></div>
+			<div class="about__title bag__title">Фирменная сумка-чехол<br><span class="accent-color accent-shadow">в подарок</span></div>
 			<div class="models__content bag__content">При покупке любого электросамоката YAKAMA, вы гарантированно получите сумку-чехол в подарок!</div>
-			<a href="#" class="header-slider__link bag__link">Выбрать электросамокат</a>
+			<a href="#" class="header-slider__link bag__link">Выбрать электросамокат <span class="arrow">→</span></a>
 		</div>
 	</section>
 	<section class="loan flex flex--row">
 		<div class="bag__right loan__left">
-			<div class="about__title loan__title">Карта <span class="accent-color">рассрочки</span></div>
+			<div class="about__title loan__title">Карта <span class="accent-color accent-shadow">рассрочки</span></div>
 			<div class="models__content loan__content">Вы также можете оформить любой товар нашей комании в рассрочку!</div>
-			<a href="#" class="header-slider__link loan__link">Оформить в рассрочку</a>
+			<a href="#" class="header-slider__link loan__link">Оформить в рассрочку <span class="arrow">→</span></a>
 		</div>
 		<div class="loan__right">
 			<img class="img-responsive" src="img/@1x/loan.png" alt="">
@@ -163,7 +164,7 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4700.464583930853!2d27.554698633644968!3d53.90984798010099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDU0JzM1LjUiTiAyN8KwMzMnMzIuNyJF!5e0!3m2!1sru!2sby!4v1581273805346!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 		</div>
 		<div class="bag__right map__right">
-			<div class="about__title map__title"><span class="accent-color">Свяжитесь</span> с нами</div>
+			<div class="about__title map__title"><span class="accent-color accent-shadow">Свяжитесь</span> с нами</div>
 			<div class="models__content map__content">Если у Вас возникли какие-либо вопросы,<br>мы с радостью ответим на них.</div>
 			<div class="info info--margin flex flex--column">
 				<div class="info__title">Наш адрес:</div>
@@ -179,7 +180,7 @@
 					<a href="#" class="info__content">YAKAMA@mail.ru</a>
 				</div>
 			</div>
-			<a href="#" class="header-slider__link map__link">Написать сообщение</a>
+			<a href="#" class="header-slider__link map__link">Написать сообщение <span class="arrow">→</span></a>
 		</div>
 	</section>
 	<footer class="header flex flex--row">
@@ -229,7 +230,7 @@
 			</div>
 			<div class="popup__right">
 				<form action="">					
-					<div class="popup__title">AP-H008-13 <span class="accent-color">YAKAMA</span></div>
+					<div class="popup__title">AP-H008-13 <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
 					<input type="hidden" value="AP-H008-13 Yakama">
 					<div class="popup__info-wrap flex flex--row">
 						<div class="column_1">
@@ -320,6 +321,18 @@
 				</form>
 			</div>
 		</div>
+	</div>
+	<div class="contact-wrap">
+		<img class="contact__close" src="img/@2x/close.png" alt="">
+		<form class="contact-form flex flex--column">
+			<div class="contact__title"><span class="accent-color">Мы перезвоним Вам,</span><br>в течении нескольких минут!</div>
+			<div class="inputs-wrap flex flex--column">
+				<label for="contact-name">имя:</label><input type="text" id="contact-name" placeholder="Укажите Ваше имя">
+				<label for="contact-phone">телефон:</label><input type="text" id="contact-phone" placeholder="+375 __ ___-__-__">
+			</div>
+			<input class="contact__submit btn btn--inverse" type="submit" value="Жду звонка!">
+			<div class="contact-info">Сейчас на линии несколько свободных<br>специалистов и мы сможем перезвонить<br>Вам в течении нескольких минут!</div>
+		</form>
 	</div>
 	<script src="js/scripts.min.js"></script>
 
