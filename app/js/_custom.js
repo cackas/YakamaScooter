@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-	let currentSlide;
 	sliderDataLength();
 	function sliderDataLength(){
 		let nbr = document.getElementById('slider-length'),
@@ -100,5 +99,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	$('.contact__close').click(function(){
 		$('.contact-wrap').fadeOut();
 	});
-	
+
+	//Popup card
+	$('.loan__list li a').click(function(e){
+		e.preventDefault();
+		$(this).siblings('.loan__popup-wrap').fadeIn();
+	});
+	$('.loan__close').click(function(){
+		$(this).parents('.loan__popup-wrap').fadeOut();
+	});
 });
