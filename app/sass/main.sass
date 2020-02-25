@@ -564,6 +564,7 @@ a, a:active, a:hover
 	width: 1.08vw
 	height: 1.08vw
 	cursor: pointer
+<<<<<<< HEAD
 .loan__popup-wrap
 	display: none
 .loan__popup
@@ -601,3 +602,39 @@ a, a:active, a:hover
 	opacity: .9
 .text--bold
 	font-family: 'MontserratBold'
+=======
+//Scroll btn
+#scroll-btn
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translate(-50%, -30%)
+  width: 2vw
+  height: 3.4vw
+  border: 1px solid white
+  background-color: $accent
+  border-radius: 3.4vw
+  opacity: 1
+  &:before
+    content: ''
+    position: absolute
+    top: .55vw
+    left: 50%
+    transform: translate(-50%, 0)
+    width: 2px
+    height: .69vw
+    background-color: white
+    animation: scrollDown 2s infinite
+
+@keyframes scrollDown
+  0%
+    opacity: 0
+    transform: translate(-50%, 0)
+
+  30%
+    opacity: 1
+
+  100%
+    opacity: 0
+    transform: translate(-50%, 22px)
+>>>>>>> 5fc07c45726c9a164696fe9b14ff6c1558d4e268

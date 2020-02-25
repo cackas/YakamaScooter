@@ -46,10 +46,37 @@ document.addEventListener("DOMContentLoaded", function() {
 		focusOnSelect: true
 	  });
 	$('.left').click(function(){
+		setTimeout(() => {
+
+			let indexScooter = $('#models-slider .img-wrap.slick-current').attr('data-slick-index'),
+				indexCitikoko = $('#models-slider-citikoko .img-wrap.slick-current').attr('data-slick-index'),
+				currentNbrScooter = document.getElementById('slider-current--scooter'),
+				currentNbrCitikoko = document.getElementById('slider-current--citikoko');
+			indexScooter++;
+			indexCitikoko++;
+			console.log(indexScooter + ',' + indexCitikoko);
+			
+			currentNbrScooter.innerHTML = '0' + indexScooter;
+			currentNbrCitikoko.innerHTML = '0' + indexCitikoko;
+		}, 100);
+		
 		$('#models-slider').slick('slickPrev');
 		$('#models-slider-citikoko').slick('slickPrev');
 	  });
 	$('.right').click(function(){
+		setTimeout(() => {
+
+			let indexScooter = $('#models-slider .img-wrap.slick-current').attr('data-slick-index'),
+				indexCitikoko = $('#models-slider-citikoko .img-wrap.slick-current').attr('data-slick-index'),
+				currentNbrScooter = document.getElementById('slider-current--scooter'),
+				currentNbrCitikoko = document.getElementById('slider-current--citikoko');
+			indexScooter++;
+			indexCitikoko++;
+			console.log(indexScooter + ',' + indexCitikoko);
+			
+			currentNbrScooter.innerHTML = '0' + indexScooter;
+			currentNbrCitikoko.innerHTML = '0' + indexCitikoko;
+		}, 100);
 		$('#models-slider').slick('slickNext');
 		$('#models-slider-citikoko').slick('slickNext');
 	});
@@ -72,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			$(this).addClass("btn--inverse");
 			$(".scooters").removeClass("invisible");
 			$(".citikokos").addClass("invisible");
+			$("#slider-current--scooter").removeClass("invisible");
+			$("#slider-current--citikoko").addClass("invisible");
 		});
 		$("#citikoko").click(function(e){
 			let nbr = document.getElementById('slider-length');
@@ -80,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			$(this).addClass("btn--inverse");
 			$(".scooters").addClass("invisible");
 			$(".citikokos").removeClass("invisible");
+			$("#slider-current--scooter").addClass("invisible");
+			$("#slider-current--citikoko").removeClass("invisible");
 		})
 	};
 
@@ -92,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	//Contact form
-	$('.header-slider__link').click(function(e){
+	$('.header-slider__link, #header-phone-btn').click(function(e){
 		e.preventDefault();
 		$('.contact-wrap').fadeIn();
 	});
