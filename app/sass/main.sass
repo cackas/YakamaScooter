@@ -94,10 +94,12 @@ a, a:active, a:hover
 	display: inline-block
 .accent-shadow
 	display: inline-block
-	box-shadow: 0 0 0 1vw rgba($accent,.07)
+	//box-shadow: 0 0 0 1vw rgba($accent,.07)
 	background-color: rgba($accent,.07)
 	border-radius: .5vw
-	line-height: 1.6vw
+	padding: 0 .5vw
+	position: relative
+	right: .5vw
 .btn--inverse
 	background-color: $accent
 	color: #fff
@@ -141,11 +143,23 @@ a, a:active, a:hover
 	font-size: 2.5vw
 	line-height: 3.3vw
 	margin-bottom: 4.4vw
+	width: max-content
+#citikoko
+	font-family: 'MontserratSemibold'
 .header-slider__link
 	font-family: 'MontserratBold'
 	font-size: .97vw
 	line-height: 1.25vw
 	cursor: pointer
+	display: flex
+	align-items: center
+	.img-arrow
+		width: 1.18vw
+		height: auto
+		margin-left: 1vw
+	.img-arrow--green
+		width: 1.875vw
+		display: none
 	.arrow
 		display: inline-block
 		font-size: 2vw
@@ -155,11 +169,20 @@ a, a:active, a:hover
 		transform: translateY(10%)
 		transition: all .3s
 		transform-origin: 0 0
-	&:hover .arrow
-		color: $accent
-		transform: translateY(10%) scaleX(1.67)
+	&:hover
+		.arrow
+			color: $accent
+			transform: translateY(10%) scaleX(1.67)
+		.img-arrow
+			display: none
+		.img-arrow--green
+			display: block
 	&:active
 		color: $accent
+		.img-arrow
+			display: none
+		.img-arrow--green
+			display: block
 .social-links
 	position: absolute
 	top: 44%
@@ -282,6 +305,24 @@ a, a:active, a:hover
 	cursor: pointer
 .left
 	margin-right: 2.1vw
+.right--green
+	display: none
+.left--green
+	transform: rotate(180deg)
+	display: none
+.left-wrap:hover
+	.left
+		display: none
+	.left--green
+		display: block
+.popup-btn
+	width: fit-content
+	cursor: pointer
+.right-wrap:hover
+	.right
+		display: none
+	.right--green
+		display: block
 .tab
 	width: 5vw
 	margin: 0 1vw
@@ -481,7 +522,7 @@ a, a:active, a:hover
 	line-height: 1.1vw
 .color-price-wrap
 	margin-bottom: 4.1vw
-	justify-content: space-between
+	justify-content: flex-end
 	align-items: center
 .colors-wrap
 	input
@@ -507,16 +548,19 @@ a, a:active, a:hover
 	line-height: 3.33vw
 	position: relative
 	&::before
-		content: ''
+		content: 'Br'
 		position: absolute
-		width: 2vw
-		height: 2.4vw
+		//width: 2vw
+		//height: 2.4vw
 		right: calc(100% + .69vw)
-		top: 50%
-		transform: translateY(-50%)
-		background-image: url('../img/@2x/Union.png')
-		background-size: 100% 100%
-		background-repeat: no-repeat
+		bottom: 0
+		font-size: 2vw
+		line-height: 2.4vw
+		color: $accent
+		//transform: translateY(-50%)
+		//background-image: url('../img/@2x/Union.png')
+		//background-size: 100% 100%
+		//background-repeat: no-repeat
 //contact form css
 .contact-wrap
 	display: none

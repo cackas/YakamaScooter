@@ -115,15 +115,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	};
 
 	//Popup form
-	$('.img-wrap').click(function(){
-		$('.popup-wrap').fadeIn();
+	$('.scooters .img-wrap').click(function(){
+		$('.popups-scooters .popup-wrap').eq($(this).index()).fadeIn();
+	});
+	$('.citikokos .img-wrap').click(function(){
+		$('.popups-citikoko .popup-wrap').eq($(this).index()).fadeIn();
 	});
 	$('.popup-close').click(function(){
 		$('.popup-wrap').fadeOut();
 	});
 
 	//Contact form
-	$('.header-slider__link, #header-phone-btn').click(function(e){
+	$('.header-slider__link, #header-phone-btn, #header-scooter-btn, .popup-btn').click(function(e){
 		e.preventDefault();
 		$('.contact-wrap').fadeIn();
 	});

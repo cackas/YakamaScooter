@@ -23,20 +23,23 @@
 	<header class="header flex flex--row">
 		<a href="#" class="logo"><img src="img/@1x/logo.svg" alt="YamahaScooter" class="img-responsive"></a>
 		<ul class="menu flex flex--row">
-			<li><a href="#">Все модели</a></li>
-			<li><a href="#">О компании</a></li>
+			<li><a href="#models-block">Все модели</a></li>
+			<li><a href="#about-block">О компании</a></li>
 			<li><a href="#">Контакты</a></li>
 		</ul>
 		<div class="btns-wrap flex flex--row">
 			<a href="#" id="header-phone-btn" class="btn">Обратный звонок</a>
-			<a href="#" class="btn btn--inverse">Заказать электросамокат</a>
+			<a href="#" id="header-scooter-btn" class="btn btn--inverse">Заказать электросамокат</a>
 		</div>
 	</header>
 	<section class="header-slider flex flex--row">
 		<div class="header-slider__left">
 			<div class="yakama-logo header-slider__title">Электросамокаты <span class="inline-block accent-color">YAK<span class="down-letter">A</span>MA</span></div>
 			<div class="header-slider__subtitle">Прокатимся<br><span class="accent-color accent-shadow">с ветерком!</span></div>
-			<a href="#" class="header-slider__link">Посмотреть все модели <span class="arrow">→</span></a>
+			<a href="#" class="header-slider__link">Посмотреть все модели <!--<span class="arrow">→</span>-->
+				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
+				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
+			</a>
 		</div>
 		<div class="header-slider__right">
 			<div id="header-slider">
@@ -51,17 +54,17 @@
 			<a href="#" class="insta">instagram</a>
 			<a href="#" class="facebook">facebook</a>
 		</div>
-		<a href="#" class="scroll-btn flex flex--column"><img src="img/@1x/scroll.png" alt="" class="invisible"><span id="scroll-btn"></span><span>scroll</span></a>
+		<a href="#" class="scroll-btn flex flex--column"><img src="img/svg/svg/ScrollDown.svg" alt="" class=""><!--<span id="scroll-btn"></span>--><span>scroll</span></a>
 
 	</section>
 </div>
-	<section class="about flex flex--column">
+	<section id="about-block" class="about flex flex--column">
 		<div class="about__content-wrap flex flex--column">
 			<div class="about__title">О компании <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
 			<div class="about__content">Мы разработали нашу продукцию, чтобы она была самой безопасной, плавной и волнующей. С превосходным ускорением, комфортной подвеской, авиационными материалами и безопасностью.</div>
 		</div>
 	</section>
-	<section class="models flex flex--row">
+	<section id="models-block" class="models flex flex--row">
 		<div class="models__left flex flex--column">
 			<div class="tabs-wrap flex flex--row">
 				<div id="scooter" class="tab-btn scooter btn btn--inverse">Электросамокаты</div>
@@ -73,32 +76,21 @@
 			</div>
 			<div class="models__slider-nav flex flex--row">
 				<div class="models__numbers flex flex--row"><span id="slider-current--scooter">01</span><span id="slider-current--citikoko" class="invisible">01</span><span class="tab"></span><span id="slider-length">06</span></div>
-				<div class="models__arrows">
-					<img src="img/@1x/left.png" alt="" class="left">
-					<img src="img/@1x/right.png" alt="" class="right">
+				<div class="models__arrows flex flex--row">
+					<div class="left-wrap flex flex--row">
+						<img src="img/@2x/left.svg" alt="" class="left">
+						<img src="img/@2x/right--green.svg" alt="" class="left left--green">
+					</div>
+					<div class="right-wrap flex flex--row">
+						<img src="img/@2x/right.svg" alt="" class="right">
+						<img src="img/@2x/right--green.svg" alt="" class="right right--green">
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="models__right">
 			<div id="models-slider" class="model-slider scooters" data-number="0">
-				<div class="img-wrap"
-					data-material="iron"
-					data-wheel-size="8"
-					data-speed="25"
-					data-power="350"
-					data-front-brake="recur"
-					data-back-brake="foot"
-					data-batary="36"
-					data-front-amm="default"
-					data-back-amm="pruzh"
-					data-light="led"
-					data-display="true"
-					data-stop-signal="true"
-					data-lights="true"
-					data-max-weight="120kg"
-					data-type="skladnoy"
-					data-weigth="14kg"
-				>
+				<div class="img-wrap">
 					<img class="img-responsive" src="img/@1x/scooter1.png" alt="">
 				</div>
 				<div class="img-wrap">
@@ -108,196 +100,283 @@
 					<img class="img-responsive" src="img/@1x/scooter3.png" alt="">
 				</div>
 			</div>
-			<div id="models-slider-citikoko" class="model-slider citikokos invisible" data-number="0">
-				<div class="img-wrap">
-					<img class="img-responsive" src="img/@1x/scooter4.png" alt="">
+			<div class="popups-scooters">
+
+				<div class="popup-wrap">
+					<div class="popup flex flex--row">
+						<img class="popup-close" src="img/@2x/close.png" alt="">
+						<div class="popup__left flex flex--column">				
+							<div class="popup-slider">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>								
+							<div class="popup-slider-nav">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>
+							<img class="popup-left" src="img/@2x/left.png" alt="">
+							<img class="popup-right" src="img/@2x/right.png" alt="">
+						</div>
+						<div class="popup__right">
+							<form action="">					
+								<div class="popup__title">AP-H008-13 <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
+								<input type="hidden" value="AP-H008-13 Yakama">
+								<div class="popup__info-wrap flex flex--row">
+									<div class="column_1">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Материал корпуса</div>
+											<div class="value">алюминиевый сплав</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Размер шин</div>
+											<div class="value">8 дюймов</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная скорость</div>
+											<div class="value">25 км / ч</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Номинальная мощность мотора</div>
+											<div class="value">350 Вт</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передние тормоза</div>
+											<div class="value">рекурперация</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задние тормоза</div>
+											<div class="value">ножной </div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Батарея</div>
+											<div class="value">36 В, 5,2 Ач</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передний аммортизатор</div>
+											<div class="value">обычный</div>
+										</div>
+									</div>
+									<div class="column_2">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задний аммортизатор</div>
+											<div class="value">пружинный</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Фара</div>
+											<div class="value">LED</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Дисплей</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Стоп сигнал</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Подсветка</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная нагрузка</div>
+											<div class="value">120кг</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Тип</div>
+											<div class="value">складной</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Вес</div>
+											<div class="value">14кг</div>
+										</div>							
+									</div>
+								</div>
+								<div class="color-price-wrap flex flex--row">
+									<!--<div class="colors-wrap flex flex--row">
+										<input type="radio" name="color" id="color-1" value="lazur">
+										<label for="color-1" style="background-color:cyan;"></label>
+										<input type="radio" name="color" id="color-2" value="blue">
+										<label for="color-2" style="background-color: blue;"></label>
+										<input type="radio" name="color" id="color-3" value="black">
+										<label for="color-3" style="background-color: black;"></label>
+										<input type="radio" name="color" id="color-4" value="grey">
+										<label for="color-4" style="background-color: grey;"></label>
+										<input type="radio" name="color" id="color-5" value="red">
+										<label for="color-5" style="background-color: red;"></label>
+									</div>-->
+									<div class="price">670</div>
+								</div>
+								<!--<input type="submit" class="btn btn--inverse" value="Заказать электросамокат" style="border:none">-->
+								<div class="popup-btn btn btn--inverse">Заказать электросамокат</div>
+							</form>
+						</div>
+					</div>
 				</div>
-				<div class="img-wrap">
-					<img class="img-responsive" src="img/@1x/scooter5.png" alt="">
+				
+				<div class="popup-wrap">
+					<div class="popup flex flex--row">
+						<img class="popup-close" src="img/@2x/close.png" alt="">
+						<div class="popup__left flex flex--column">				
+							<div class="popup-slider">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>								
+							<div class="popup-slider-nav">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>
+							<img class="popup-left" src="img/@2x/left.png" alt="">
+							<img class="popup-right" src="img/@2x/right.png" alt="">
+						</div>
+						<div class="popup__right">
+							<form action="">					
+								<div class="popup__title">AP-H008-13 <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
+								<input type="hidden" value="AP-H008-13 Yakama">
+								<div class="popup__info-wrap flex flex--row">
+									<div class="column_1">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Материал корпуса</div>
+											<div class="value">алюминиевый сплав</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Размер шин</div>
+											<div class="value">8 дюймов</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная скорость</div>
+											<div class="value">25 км / ч</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Номинальная мощность мотора</div>
+											<div class="value">350 Вт</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передние тормоза</div>
+											<div class="value">рекурперация</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задние тормоза</div>
+											<div class="value">ножной </div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Батарея</div>
+											<div class="value">36 В, 5,2 Ач</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передний аммортизатор</div>
+											<div class="value">обычный</div>
+										</div>
+									</div>
+									<div class="column_2">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задний аммортизатор</div>
+											<div class="value">пружинный</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Фара</div>
+											<div class="value">LED</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Дисплей</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Стоп сигнал</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Подсветка</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная нагрузка</div>
+											<div class="value">120кг</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Тип</div>
+											<div class="value">складной</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Вес</div>
+											<div class="value">14кг</div>
+										</div>							
+									</div>
+								</div>
+								<div class="color-price-wrap flex flex--row">
+									<!--<div class="colors-wrap flex flex--row">
+										<input type="radio" name="color" id="color-1" value="lazur">
+										<label for="color-1" style="background-color:cyan;"></label>
+										<input type="radio" name="color" id="color-2" value="blue">
+										<label for="color-2" style="background-color: blue;"></label>
+										<input type="radio" name="color" id="color-3" value="black">
+										<label for="color-3" style="background-color: black;"></label>
+										<input type="radio" name="color" id="color-4" value="grey">
+										<label for="color-4" style="background-color: grey;"></label>
+										<input type="radio" name="color" id="color-5" value="red">
+										<label for="color-5" style="background-color: red;"></label>
+									</div>-->
+									<div class="price">670</div>
+								</div>
+								<!--<input type="submit" class="btn btn--inverse" value="Заказать электросамокат" style="border:none">-->
+								<div class="popup-btn btn btn--inverse">Заказать электросамокат</div>
+							</form>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<section class="bag flex flex--row">
-		<div class="bag__left">
-			<img class="img-responsive" src="img/@1x/bag.png" alt="">
-		</div>
-		<div class="bag__right">
-			<div class="counter-wrap">
-				<div class="counter__title">До конца акции осталось:</div>
-				<div class="counter flex flex--row">
-					<div class="numb flex flex--column">
-						<span class="green-circle">06</span>
-						<span class="numb__name">дней</span>
-					</div>
-					<div class="numb flex flex--column">
-						<span class="green-circle">13</span>
-						<span class="numb__name">часов</span>
-					</div>
-					<div class="numb flex flex--column">
-						<span class="green-circle">59</span>
-						<span class="numb__name">минут</span>
-					</div>
-					<div class="numb flex flex--column">
-						<span class="green-circle">19</span>
-						<span class="numb__name">секунд</span>
-					</div>
-				</div>
-			</div>
-			<div class="about__title bag__title">Фирменная сумка-чехол<br><span class="accent-color accent-shadow">в подарок</span></div>
-			<div class="models__content bag__content">При покупке любого электросамоката YAKAMA, вы гарантированно получите сумку-чехол в подарок!</div>
-			<a href="#" class="header-slider__link bag__link">Выбрать электросамокат <span class="arrow">→</span></a>
-		</div>
-	</section>
-	<section class="loan flex flex--row">
-		<div class="bag__right loan__left">
-			<div class="about__title loan__title">Карта <span class="accent-color accent-shadow">рассрочки</span></div>
-			<div class="models__content loan__content">Вы также можете оформить любой товар нашей комании в рассрочку!</div>
-			<ul class="loan__list flex flex--column">
-				<li>
-					<a href="#">«Магнит» от ОАО «Беларусбанк» на 4 месяца</a>
-					<div class="loan__popup-wrap">
-						<div class="loan__popup flex flex--row">						
-							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
-							<img src="img/@1x/funkarta.png" alt="" class="loan__img">
-							<div class="loan__descr">
-								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
-								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
-								<ul class="card__features">
-									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
-									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
-								</ul>
-								<div class="card__more">Более подробная информация о карте по телефону 148</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<a href="#">«Халва» от МТБанка на 2 месяца</a>
-					<div class="loan__popup-wrap">
-						<div class="loan__popup flex flex--row">						
-							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
-							<img src="img/@1x/funkarta.png" alt="" class="loan__img">
-							<div class="loan__descr">
-								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
-								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
-								<ul class="card__features">
-									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
-									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
-								</ul>
-								<div class="card__more">Более подробная информация о карте по телефону 148</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<a href="#">«Карта покупок» от Белгазпромбанка на 9 месяцев</a>
-					<div class="loan__popup-wrap">
-						<div class="loan__popup flex flex--row">						
-							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
-							<img src="img/@1x/funkarta.png" alt="" class="loan__img">
-							<div class="loan__descr">
-								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
-								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
-								<ul class="card__features">
-									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
-									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
-								</ul>
-								<div class="card__more">Более подробная информация о карте по телефону 148</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<a href="#">«SMART карта» банка «Дабрабыт» на 4 месяца</a>
-					<div class="loan__popup-wrap">
-						<div class="loan__popup flex flex--row">						
-							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
-							<img src="img/@1x/funkarta.png" alt="" class="loan__img">
-							<div class="loan__descr">
-								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
-								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
-								<ul class="card__features">
-									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
-									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
-								</ul>
-								<div class="card__more">Более подробная информация о карте по телефону 148</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<a href="#">«Черепаха» от Банк ВТБ на 10 месяцев</a>
-					<div class="loan__popup-wrap">
-						<div class="loan__popup flex flex--row">						
-							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
-							<img src="img/@1x/funkarta.png" alt="" class="loan__img">
-							<div class="loan__descr">
-								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
-								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
-								<ul class="card__features">
-									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
-									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
-								</ul>
-								<div class="card__more">Более подробная информация о карте по телефону 148</div>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<a href="#">«Карта FUN» от «БПС-Сбербанка» на 3 месяц</a>
-					<div class="loan__popup-wrap">
-						<div class="loan__popup flex flex--row">						
-							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
-							<img src="img/@1x/funkarta.png" alt="" class="loan__img">
-							<div class="loan__descr">
-								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
-								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
-								<ul class="card__features">
-									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
-									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
-								</ul>
-								<div class="card__more">Более подробная информация о карте по телефону 148</div>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-			<a href="#" class="header-slider__link loan__link">Оформить в рассрочку <span class="arrow">→</span></a>
-		</div>
-		<div class="loan__right">
-			<img class="img-responsive" src="img/@1x/loan.png" alt="">
-		</div>
-	</section>
-	<section class="map flex flex--row">
-		<div class="bag__left map__left">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4700.464583930853!2d27.554698633644968!3d53.90984798010099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDU0JzM1LjUiTiAyN8KwMzMnMzIuNyJF!5e0!3m2!1sru!2sby!4v1581273805346!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-		</div>
-		<div class="bag__right map__right">
-			<div class="about__title map__title"><span class="accent-color accent-shadow">Свяжитесь</span> с нами</div>
-			<div class="models__content map__content">Если у Вас возникли какие-либо вопросы,<br>мы с радостью ответим на них.</div>
-			<div class="info info--margin flex flex--column">
-				<div class="info__title">Наш адрес:</div>
-				<div class="info__content">ул. Максима Богдановича 153,<br>Минск 220040, Беларусь</div>		
-			</div>
-			<div class="info-wrap flex flex--row">
-				<div class="info flex flex--column">
-					<div class="info__title">Телефон:</div>
-					<a href="#" class="info__content">+375 17 284-88-22</a>
-				</div>
-				<div class="info flex flex--column">
-					<div class="info__title">E-mail:</div>
-					<a href="#" class="info__content">YAKAMA@mail.ru</a>
-				</div>
-			</div>
-			<a href="#" class="header-slider__link map__link">Написать сообщение <span class="arrow">→</span></a>
-		</div>
-	</section>
-	<footer class="header flex flex--row">
-		<a href="#" class="logo"><img src="img/@1x/logo.svg" alt="YamahaScooter" class="img-responsive"></a>
-		<div class="rights">All rights reserved @ 2020 YAKAMA</div>
-	</footer>
-	<div class="popup-wrap">
+	
+				<div class="popup-wrap">
 		<div class="popup flex flex--row">
 			<img class="popup-close" src="img/@2x/close.png" alt="">
 			<div class="popup__left flex flex--column">				
@@ -413,7 +492,7 @@
 						</div>
 					</div>
 					<div class="color-price-wrap flex flex--row">
-						<div class="colors-wrap flex flex--row">
+						<!--<div class="colors-wrap flex flex--row">
 							<input type="radio" name="color" id="color-1" value="lazur">
 							<label for="color-1" style="background-color:cyan;"></label>
 							<input type="radio" name="color" id="color-2" value="blue">
@@ -424,14 +503,492 @@
 							<label for="color-4" style="background-color: grey;"></label>
 							<input type="radio" name="color" id="color-5" value="red">
 							<label for="color-5" style="background-color: red;"></label>
-						</div>
+						</div>-->
 						<div class="price">670</div>
 					</div>
-					<input type="submit" class="btn btn--inverse" value="Заказать электросамокат" style="border:none">
+					<!--<input type="submit" class="btn btn--inverse" value="Заказать электросамокат" style="border:none">-->
+					<div class="popup-btn btn btn--inverse">Заказать электросамокат</div>
 				</form>
 			</div>
 		</div>
-	</div>
+				</div>
+
+			</div>
+			<div id="models-slider-citikoko" class="model-slider citikokos invisible" data-number="0">
+				<div class="img-wrap">
+					<img class="img-responsive" src="img/@1x/scooter4.png" alt="">
+				</div>
+				<div class="img-wrap">
+					<img class="img-responsive" src="img/@1x/scooter5.png" alt="">
+				</div>
+			</div>
+			<div class="popups-citikoko">
+
+				<div class="popup-wrap">
+					<div class="popup flex flex--row">
+						<img class="popup-close" src="img/@2x/close.png" alt="">
+						<div class="popup__left flex flex--column">				
+							<div class="popup-slider">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>								
+							<div class="popup-slider-nav">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>
+							<img class="popup-left" src="img/@2x/left.png" alt="">
+							<img class="popup-right" src="img/@2x/right.png" alt="">
+						</div>
+						<div class="popup__right">
+							<form action="">					
+								<div class="popup__title">AP-H008-13 <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
+								<input type="hidden" value="AP-H008-13 Yakama">
+								<div class="popup__info-wrap flex flex--row">
+									<div class="column_1">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Материал корпуса</div>
+											<div class="value">алюминиевый сплав</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Размер шин</div>
+											<div class="value">8 дюймов</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная скорость</div>
+											<div class="value">25 км / ч</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Номинальная мощность мотора</div>
+											<div class="value">350 Вт</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передние тормоза</div>
+											<div class="value">рекурперация</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задние тормоза</div>
+											<div class="value">ножной </div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Батарея</div>
+											<div class="value">36 В, 5,2 Ач</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передний аммортизатор</div>
+											<div class="value">обычный</div>
+										</div>
+									</div>
+									<div class="column_2">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задний аммортизатор</div>
+											<div class="value">пружинный</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Фара</div>
+											<div class="value">LED</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Дисплей</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Стоп сигнал</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Подсветка</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная нагрузка</div>
+											<div class="value">120кг</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Тип</div>
+											<div class="value">складной</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Вес</div>
+											<div class="value">14кг</div>
+										</div>							
+									</div>
+								</div>
+								<div class="color-price-wrap flex flex--row">
+									<!--<div class="colors-wrap flex flex--row">
+										<input type="radio" name="color" id="color-1" value="lazur">
+										<label for="color-1" style="background-color:cyan;"></label>
+										<input type="radio" name="color" id="color-2" value="blue">
+										<label for="color-2" style="background-color: blue;"></label>
+										<input type="radio" name="color" id="color-3" value="black">
+										<label for="color-3" style="background-color: black;"></label>
+										<input type="radio" name="color" id="color-4" value="grey">
+										<label for="color-4" style="background-color: grey;"></label>
+										<input type="radio" name="color" id="color-5" value="red">
+										<label for="color-5" style="background-color: red;"></label>
+									</div>-->
+									<div class="price">670</div>
+								</div>
+								<!--<input type="submit" class="btn btn--inverse" value="Заказать электросамокат" style="border:none">-->
+								<div class="popup-btn btn btn--inverse">Заказать электросамокат</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="popup-wrap">
+					<div class="popup flex flex--row">
+						<img class="popup-close" src="img/@2x/close.png" alt="">
+						<div class="popup__left flex flex--column">				
+							<div class="popup-slider">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>								
+							<div class="popup-slider-nav">
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+								<div class="img-wrap">
+									<img class="img-responsive" src="img/@2x/IMG00064.jpg" alt="">
+								</div>
+							</div>
+							<img class="popup-left" src="img/@2x/left.png" alt="">
+							<img class="popup-right" src="img/@2x/right.png" alt="">
+						</div>
+						<div class="popup__right">
+							<form action="">					
+								<div class="popup__title">AP-H008-13 <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
+								<input type="hidden" value="AP-H008-13 Yakama">
+								<div class="popup__info-wrap flex flex--row">
+									<div class="column_1">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Материал корпуса</div>
+											<div class="value">алюминиевый сплав</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Размер шин</div>
+											<div class="value">8 дюймов</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная скорость</div>
+											<div class="value">25 км / ч</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Номинальная мощность мотора</div>
+											<div class="value">350 Вт</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передние тормоза</div>
+											<div class="value">рекурперация</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задние тормоза</div>
+											<div class="value">ножной </div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Батарея</div>
+											<div class="value">36 В, 5,2 Ач</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Передний аммортизатор</div>
+											<div class="value">обычный</div>
+										</div>
+									</div>
+									<div class="column_2">
+										<div class="key-wrap flex flex--row">
+											<div class="key">Задний аммортизатор</div>
+											<div class="value">пружинный</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Фара</div>
+											<div class="value">LED</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Дисплей</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Стоп сигнал</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Подсветка</div>
+											<div class="value">есть</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Максимальная нагрузка</div>
+											<div class="value">120кг</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Тип</div>
+											<div class="value">складной</div>
+										</div>
+										<div class="key-wrap flex flex--row">
+											<div class="key">Вес</div>
+											<div class="value">14кг</div>
+										</div>							
+									</div>
+								</div>
+								<div class="color-price-wrap flex flex--row">
+									<!--<div class="colors-wrap flex flex--row">
+										<input type="radio" name="color" id="color-1" value="lazur">
+										<label for="color-1" style="background-color:cyan;"></label>
+										<input type="radio" name="color" id="color-2" value="blue">
+										<label for="color-2" style="background-color: blue;"></label>
+										<input type="radio" name="color" id="color-3" value="black">
+										<label for="color-3" style="background-color: black;"></label>
+										<input type="radio" name="color" id="color-4" value="grey">
+										<label for="color-4" style="background-color: grey;"></label>
+										<input type="radio" name="color" id="color-5" value="red">
+										<label for="color-5" style="background-color: red;"></label>
+									</div>-->
+									<div class="price">670</div>
+								</div>
+								<!--<input type="submit" class="btn btn--inverse" value="Заказать электросамокат" style="border:none">-->
+								<div class="popup-btn btn btn--inverse">Заказать электросамокат</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<section class="bag flex flex--row">
+		<div class="bag__left">
+			<img class="img-responsive" src="img/@1x/bag.png" alt="">
+		</div>
+		<div class="bag__right">
+			<!--<div class="counter-wrap">
+				<div class="counter__title">До конца акции осталось:</div>
+				<div class="counter flex flex--row">
+					<div class="numb flex flex--column">
+						<span class="green-circle">06</span>
+						<span class="numb__name">дней</span>
+					</div>
+					<div class="numb flex flex--column">
+						<span class="green-circle">13</span>
+						<span class="numb__name">часов</span>
+					</div>
+					<div class="numb flex flex--column">
+						<span class="green-circle">59</span>
+						<span class="numb__name">минут</span>
+					</div>
+					<div class="numb flex flex--column">
+						<span class="green-circle">19</span>
+						<span class="numb__name">секунд</span>
+					</div>
+				</div>
+			</div>-->
+			<div class="about__title bag__title">Фирменная сумка-чехол<br><span class="accent-color accent-shadow">в подарок</span></div>
+			<div class="models__content bag__content">При покупке любого электросамоката YAKAMA, вы гарантированно получите сумку-чехол в подарок!</div>
+			<a href="#" class="header-slider__link bag__link">Выбрать электросамокат <!--<span class="arrow">→</span>-->
+				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
+				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
+			</a>
+		</div>
+	</section>
+	<section class="loan flex flex--row">
+		<div class="bag__right loan__left">
+			<div class="about__title loan__title">Карта <span class="accent-color accent-shadow">рассрочки</span></div>
+			<div class="models__content loan__content">Вы также можете оформить любой товар нашей комании в рассрочку!</div>
+			<ul class="loan__list flex flex--column">
+				<li>
+					<a href="#">«Магнит» от ОАО «Беларусбанк» на 4 месяца</a>
+					<div class="loan__popup-wrap">
+						<div class="loan__popup flex flex--row">						
+							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
+							<img src="img/@1x/magnit.png" alt="" class="loan__img">
+							<div class="loan__descr">
+								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
+								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
+								<ul class="card__features">
+									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
+									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
+								</ul>
+								<div class="card__more">Более подробная информация о карте по телефону 148</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">«Халва» от МТБанка на 2 месяца</a>
+					<div class="loan__popup-wrap">
+						<div class="loan__popup flex flex--row">						
+							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
+							<img src="img/@1x/halva.png" alt="" class="loan__img">
+							<div class="loan__descr">
+								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
+								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
+								<ul class="card__features">
+									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
+									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
+								</ul>
+								<div class="card__more">Более подробная информация о карте по телефону 148</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">«Карта покупок» от Белгазпромбанка на 9 месяцев</a>
+					<div class="loan__popup-wrap">
+						<div class="loan__popup flex flex--row">						
+							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
+							<img src="img/@1x/kartapokupok.png" alt="" class="loan__img">
+							<div class="loan__descr">
+								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
+								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
+								<ul class="card__features">
+									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
+									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
+								</ul>
+								<div class="card__more">Более подробная информация о карте по телефону 148</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">«SMART карта» банка «Дабрабыт» на 4 месяца</a>
+					<div class="loan__popup-wrap">
+						<div class="loan__popup flex flex--row">						
+							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
+							<img src="img/@1x/smartkarta.png" alt="" class="loan__img">
+							<div class="loan__descr">
+								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
+								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
+								<ul class="card__features">
+									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока;</li>
+									<li>Кредит, который можно получить наличными в банкомате или переводом на карту.</li>
+								</ul>
+								<div class="card__more">Более подробная информация о карте по телефону 148</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">«Черепаха» от Банк ВТБ на 10 месяцев</a>
+					<div class="loan__popup-wrap">
+						<div class="loan__popup flex flex--row">						
+							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
+							<img src="img/@1x/vtb.png" alt="" class="loan__img">
+							<div class="loan__descr">
+								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
+								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
+								<ul class="card__features">
+									<li>Pассрочка на 10 месяцев</li>
+									<li>Bозможно досрочное погашение</li>
+								</ul>
+								<div class="card__more">Более подробная информация о карте по телефону 148</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">«Карта FUN» от «БПС-Сбербанка» на 3 месяц</a>
+					<div class="loan__popup-wrap">
+						<div class="loan__popup flex flex--row">						
+							<img class="contact__close loan__close" src="img/@2x/close.png" alt="">
+							<img src="img/@1x/funkarta.png" alt="" class="loan__img">
+							<div class="loan__descr">
+								<div class="about__title bag__title card__title"><span class="accent-color accent-shadow">Рассрочка</span><br>с привлечением банка</div>
+								<div class="models__content bag__content card__descr">Рассрочка с <span class="text--bold">картой «Карта FUN»</span> от «БПС-Сбербанка» на 3 месяца</div>
+								<ul class="card__features">
+									<li>Рассрочка без комиссии и процентов за пользование рассрочкой в течение всего срока</li>
+									<li>Кредит, который можно получить наличными в банкомате или переводом на карту</li>
+								</ul>
+								<div class="card__more">Более подробная информация о карте по телефону 148</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<a href="#" class="header-slider__link loan__link">Оформить в рассрочку <!--<span class="arrow">→</span>-->
+				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
+				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
+			</a>
+		</div>
+		<div class="loan__right">
+			<img class="img-responsive" src="img/@1x/loan.png" alt="">
+		</div>
+	</section>
+	<section class="map flex flex--row">
+		<div class="bag__left map__left">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.8001791790293!2d27.57779521590311!3d53.93529378010663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf71d39b746d%3A0x601966acc21d6415!2z0YPQuy4g0JzQsNC60YHQuNC80LAg0JHQvtCz0LTQsNC90L7QstC40YfQsCAxNTMsINCc0LjQvdGB0Lo!5e0!3m2!1sru!2sby!4v1582670198800!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+		</div>
+		<div class="bag__right map__right">
+			<div class="about__title map__title"><span class="accent-color accent-shadow">Свяжитесь</span> с нами</div>
+			<div class="models__content map__content">Если у Вас возникли какие-либо вопросы,<br>мы с радостью ответим на них.</div>
+			<div class="info info--margin flex flex--column">
+				<div class="info__title">Наш адрес:</div>
+				<div class="info__content">ул. Максима Богдановича 153,<br>Минск 220040, Беларусь</div>		
+			</div>
+			<div class="info-wrap flex flex--row">
+				<div class="info flex flex--column">
+					<div class="info__title">Телефон:</div>
+					<a href="#" class="info__content">+375 17 284-88-22</a>
+				</div>
+				<div class="info flex flex--column">
+					<div class="info__title">E-mail:</div>
+					<a href="#" class="info__content">YAKAMA@mail.ru</a>
+				</div>
+			</div>
+			<a href="#" class="header-slider__link map__link">Написать сообщение <!--<span class="arrow">→</span>-->
+				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
+				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
+			</a>
+		</div>
+	</section>
+	<footer class="header flex flex--row">
+		<a href="#" class="logo"><img src="img/@1x/logo.svg" alt="YamahaScooter" class="img-responsive"></a>
+		<div class="rights">All rights reserved @ 2020 YAKAMA</div>
+	</footer>
 	<div class="contact-wrap">
 		<img class="contact__close" src="img/@2x/close.png" alt="">
 		<form class="contact-form flex flex--column">
