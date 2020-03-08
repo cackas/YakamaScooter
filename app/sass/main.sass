@@ -273,11 +273,11 @@ a, a:active, a:hover
 	line-height: 1.25vw
 	font-family: 'MontserratBold'
 .scooter
-	border-top-right-radius: 0
-	border-bottom-right-radius: 0
+	border-top-right-radius: 0 !important
+	border-bottom-right-radius: 0 !important
 .el-scooter
-	border-top-left-radius: 0
-	border-bottom-left-radius: 0
+	border-top-left-radius: 0 !important
+	border-bottom-left-radius: 0 !important
 .tabs-wrap
 	margin-bottom: 4.2vw
 .models__title
@@ -339,6 +339,7 @@ a, a:active, a:hover
 	transform: translate(-50%,-50%)
 	width: 100%
 	background-color: #fff
+	z-index: 1
 .bag
 	padding: 19.7vw 9.9vw 14.4vw 12.5vw
 	justify-content: space-between
@@ -679,3 +680,388 @@ a, a:active, a:hover
   100%
     opacity: 0
     transform: translate(-50%, 22px)
+//Css for model list popup
+.popup-list-wrap
+	display: none
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background-color: #fff
+	box-shadow: 0 1vw 3.4vw rgba(1,1,37,.15)
+	width: 100%
+	max-height: 100vh
+	overflow: hidden
+.popup-list__top
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 5.4vw
+	.header-slider__subtitle, .tabs-wrap
+		margin-bottom: 0
+.popup-list
+	padding: 5.7vw 8.3vw
+	max-height: 100vh
+.list-model	
+	padding: 2.77vw
+	align-items: flex-start
+	border-radius: .7vw
+	width: 20.3vw
+	cursor: pointer
+	position: relative
+	&:hover
+		box-shadow: 0px .5vw 1.6vw rgba(0, 0, 0, 0.1)
+		.sale-wrap
+			display: inherit
+.list-model__img
+	margin-bottom: 2.77vw
+.list-model__name
+	font-family: 'MontserratMedium'
+	font-size: .83vw
+	line-height: 1vw
+	color: #9C9C9C
+	margin-bottom: .34vw
+.list-model__title
+	font-family: 'MontserratMedium'
+	font-size: 1.25vw
+	line-height: 1.52vw
+	color: #29324A
+	margin-bottom: 1.52vw
+.list-model__bottom
+	width: 100%
+	justify-content: space-between
+.popup-list__list
+	flex-wrap: wrap
+	width: calc( 100% + 5vw )
+	overflow-y: scroll
+	max-height: 35vw
+	position: relative
+	right: 2.5vw
+	padding-left: 2.5vw
+	padding-top: 1vw
+.price-top
+	font-family: 'MontserratBold'
+	font-size: 1.25vw
+	line-height: 1.52vw
+.price-bottom
+	font-family: 'MontserratBold'
+	font-size: 1vw
+	line-height: 1.18vw
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 60%
+		width: 90%
+		height: 1px
+		background-color: #8D8C8C
+		left: 0
+.sale-wrap
+	display: none
+	position: absolute
+	top: .9vw
+	left: 1vw
+	font-family: 'MontserratMedium'
+	font-size: .83vw
+	line-height: .83vw
+	background-color: $accent
+	color: #ffffff
+	width: 2.5vw
+	height: 2.5vw
+	border-radius: 50%
+.sale
+	width: 100%
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+.popup-list__arrow
+	margin-bottom: 2.78vw
+//Adaptive css
+//Hmburger menu
+.cmn-toggle-switch
+  display: none
+  position: relative
+  overflow: hidden
+  margin: 0
+  padding: 0
+  width: 5.5vw
+  height: 5.5vw
+  font-size: 0
+  appearance: none
+  box-shadow: none
+  border-radius: none
+  border: none
+  cursor: pointer
+  transition: background 0.3s
+  z-index: 5
+
+.cmn-toggle-switch:focus 
+  outline: none 
+
+.cmn-toggle-switch span 
+  display: block
+  position: absolute
+  left: 0
+  right: 0
+  height: .8vw
+  background: $accent
+.cmn-toggle-switch--ad.cmn-toggle-switch span
+  background: $accent
+
+.cmn-toggle-switch span:before,
+.cmn-toggle-switch span:after 
+  position: absolute
+  display: block
+  left: 0
+  width: 100%
+  height: .8vw
+  background-color: $accent
+  content: "" 
+.cmn-toggle-switch--ad.cmn-toggle-switch span:before,
+.cmn-toggle-switch--ad.cmn-toggle-switch span:after
+  background: $accent
+.cmn-toggle-switch span:before 
+  top: -1.6vw
+
+.cmn-toggle-switch span:after 
+  bottom: -1.6vw
+
+/**
+ * Style 2
+ *
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.cmn-toggle-switch__htx 
+  background-color: transparent 
+
+.cmn-toggle-switch__htx span 
+  transition: background 0 0.3s 
+
+.cmn-toggle-switch__htx span:before,
+.cmn-toggle-switch__htx span:after
+	transition-duration: 0.3s, 0.3s
+	transition-delay: 0.3s, 0 
+
+.cmn-toggle-switch__htx span:before 
+  transition-property: top, transform
+
+.cmn-toggle-switch__htx span:after 
+  transition-property: bottom, transform
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htx.active
+  background-color: transparent
+
+.cmn-toggle-switch__htx.active span
+  background: none
+
+.cmn-toggle-switch__htx.active span:before
+  top: 0
+  transform: rotate(33deg)
+  background-color: $accent
+
+.cmn-toggle-switch__htx.active span:after
+  bottom: 0
+  transform: rotate(-33deg)
+  background-color: $accent
+
+.cmn-toggle-switch__htx.active span:before,
+.cmn-toggle-switch__htx.active span:after
+	transition-delay: 0, 0.3s
+@media screen and ( max-width: 768px )
+	.cmn-toggle-switch
+		display: none
+	.menu-wrap
+		display: none
+		width: 100%
+		position: fixed
+		top: 0
+		left: 0
+		background-color: #fff
+		height: 100vh
+		z-index: 1
+	.menu
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 4vw 0
+		height: 100%
+		justify-content: center
+		li
+			margin: 0 0 2vw
+			a
+				font-size: 2.5vw
+				line-height: 3vw
+	.logo
+		width: 25vw
+	.btn
+		padding: 2vw 3.2vw
+		border-radius: 1vw
+		font-size: 2vw
+		line-height: 2.5vw
+	.header-slider__right
+		display: none
+	.header-slider
+		padding: 18vw 0
+		background-image: none 
+	.header-slider__left
+		max-width: inherit
+		display: flex
+		flex-direction: column
+		align-items: center
+	.header-slider__title
+		font-size: 4vw
+		line-height: 4vw
+		margin-bottom: 6vw
+	.header-slider__subtitle
+		font-size: 7vw
+		line-height: 9vw
+		margin-bottom: 11vw
+	.header-slider__link
+		font-size: 3vw
+		line-height: 4vw
+		.img-arrow
+			width: 4vw
+		.img-arrow--green
+			width: 4.5vw
+	.social-links
+		transform: rotate(-90deg) translateY(-14vw)
+		a
+			font-size: 2vw
+			line-height: 3.5vw
+			margin-right: 4vw
+	.scroll-btn
+		bottom: 0
+		left: 50%
+		transform: translate(-50%,0)
+		img
+			width: 3vw
+		span
+			font-size: 2vw
+			line-height: 2.5vw
+	.about__content-wrap
+		width: inherit
+	.about__title
+		font-size: 5vw
+		line-height: 6.6vw
+		margin-bottom: 4vw
+	.about__content
+		font-size: 2.2vw
+		line-height: 3vw
+	.models
+		flex-direction: column
+		margin: 0 10vw
+	.models__left
+		width: inherit
+		margin-right: 0
+		align-items: center
+	.models__right
+		width: 100%
+	.model-slider
+		width: 100% !important
+	.models__slider-nav
+		display: none
+	.models__title
+		font-size: 5vw
+		line-height: 6.6vw
+	.models__content
+		font-size: 2.2vw
+		line-height: 3vw
+		margin-bottom: 4vw
+	.loan__list
+		margin-bottom: 5vw
+		li
+			margin-bottom: 2vw
+	.loan__list li::before
+		width: 1vw
+		height: 1vw
+	.tabs-wrap
+		align-self: center
+	.popup-list__arrow
+		display: none
+	.bag,.about,.map
+		padding: 20vw 10vw
+	.loan
+		flex-direction: column
+		align-items: center
+		padding: 13vw 10vw
+	.bag__left
+		display: none
+	.bag__right
+		width: inherit
+		margin-bottom: 5vw
+		display: flex
+		flex-direction: column
+		align-items: center
+	.loan__content
+		text-align: center
+	.loan__right
+		width: inherit
+		display: none
+	.loan__list li a
+		font-size: 2vw
+		line-height: 2.5vw
+	.map
+		flex-direction: column
+		align-items: center
+	.info--margin
+		margin-bottom: 4vw
+	.info__title
+		font-size: 2vw
+		line-height: 3vw
+	.info__content
+		font-size: 2vw
+		line-height: 3vw
+	.map
+		padding: 30vw 10vw 5vw
+	.rights
+		font-size: 2vw
+		line-height: 3vw
+	.contact-wrap
+		padding: 8vw 10vw
+		width: 70vw
+	.contact__close
+		width: 2.5vw
+		height: 2.5vw
+		top: 5vw
+		right: 5vw
+	.contact__title
+		font-size: 2.5vw
+		line-height: 4vw
+		margin-bottom: 5vw
+	.inputs-wrap
+		margin-bottom: 5vw
+		label
+			font-size: 1.5vw
+			line-height: 2vw
+			margin-bottom: 2vw
+		input
+			margin-bottom: 5vw
+	.contact-info
+		font-size: 2vw
+		line-height: 3vw
+	.popup
+		flex-direction: column
+	.popup__left
+		display: none
+		width: 70%
+		margin-bottom: 4vw
+	.popup__right
+		width: 100%
+	.popup-slider
+		width: 100%
+	.popup-slider-nav,.popup-left, .popup-right
+		display: none
+	.popup__title
+		text-align: center
+	.key
+		width: 18vw
+	.key,.value
+		font-size: 2vw
+		line-height: 3vw
+	.popup-close
+		width: 2.5vw
+		height: 2.5vw
+		top: 5vw
+		right: 5vw

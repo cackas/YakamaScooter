@@ -22,21 +22,24 @@
 <div class="header-wrap">
 	<header class="header flex flex--row">
 		<a href="#" class="logo"><img src="img/@1x/logo.svg" alt="YamahaScooter" class="img-responsive"></a>
-		<ul class="menu flex flex--row">
-			<li><a href="#models-block">Все модели</a></li>
-			<li><a href="#about-block">О компании</a></li>
-			<li><a href="#">Контакты</a></li>
-		</ul>
+		<div class="menu-wrap">
+			<ul class="menu flex flex--row">
+				<li><a href="#models-block">Все модели</a></li>
+				<li><a href="#about-block">О компании</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</div>
 		<div class="btns-wrap flex flex--row">
 			<a href="#" id="header-phone-btn" class="btn">Обратный звонок</a>
 			<a href="#" id="header-scooter-btn" class="btn btn--inverse">Заказать электросамокат</a>
 		</div>
+		<button class="cmn-toggle-switch cmn-toggle-switch__htx"><span>toggle menu</span></button>
 	</header>
 	<section class="header-slider flex flex--row">
 		<div class="header-slider__left">
 			<div class="yakama-logo header-slider__title">Электросамокаты <span class="inline-block accent-color">YAK<span class="down-letter">A</span>MA</span></div>
 			<div class="header-slider__subtitle">Прокатимся<br><span class="accent-color accent-shadow">с ветерком!</span></div>
-			<a href="#" class="header-slider__link">Посмотреть все модели <!--<span class="arrow">→</span>-->
+			<a href="#" id="header-slider__link" class="header-slider__link">Посмотреть все модели <!--<span class="arrow">→</span>-->
 				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
 				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
 			</a>
@@ -74,6 +77,10 @@
 			<div class="models__content">
 				Наш продукт не похож ни на один, который вы видели раньше, единственный, который вам когда-либо понадобится.
 			</div>
+			<a href="#" id="models__link" class="header-slider__link popup-list__arrow">Посмотреть все модели <!--<span class="arrow">→</span>-->
+				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
+				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
+			</a>
 			<div class="models__slider-nav flex flex--row">
 				<div class="models__numbers flex flex--row"><span id="slider-current--scooter">01</span><span id="slider-current--citikoko" class="invisible">01</span><span class="tab"></span><span id="slider-length">06</span></div>
 				<div class="models__arrows flex flex--row">
@@ -829,7 +836,7 @@
 			</div>-->
 			<div class="about__title bag__title">Фирменная сумка-чехол<br><span class="accent-color accent-shadow">в подарок</span></div>
 			<div class="models__content bag__content">При покупке любого электросамоката YAKAMA, вы гарантированно получите сумку-чехол в подарок!</div>
-			<a href="#" class="header-slider__link bag__link">Выбрать электросамокат <!--<span class="arrow">→</span>-->
+			<a href="#" id="bag__link" class="header-slider__link bag__link">Выбрать электросамокат <!--<span class="arrow">→</span>-->
 				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
 				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
 			</a>
@@ -949,7 +956,7 @@
 					</div>
 				</li>
 			</ul>
-			<a href="#" class="header-slider__link loan__link">Оформить в рассрочку <!--<span class="arrow">→</span>-->
+			<a href="#" id="loan__link" class="header-slider__link loan__link">Оформить в рассрочку <!--<span class="arrow">→</span>-->
 				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
 				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
 			</a>
@@ -979,7 +986,7 @@
 					<a href="#" class="info__content">YAKAMA@mail.ru</a>
 				</div>
 			</div>
-			<a href="#" class="header-slider__link map__link">Написать сообщение <!--<span class="arrow">→</span>-->
+			<a href="#" id="map__link" class="header-slider__link map__link">Написать сообщение <!--<span class="arrow">→</span>-->
 				<img class="img-arrow" src="img/svg/svg/arrow.svg" alt="">
 				<img class="img-arrow img-arrow--green" src="img/svg/svg/arrowsliderhover.svg" alt="">
 			</a>
@@ -1000,6 +1007,221 @@
 			<input class="contact__submit btn btn--inverse" type="submit" value="Жду звонка!">
 			<div class="contact-info">Сейчас на линии несколько свободных<br>специалистов и мы сможем перезвонить<br>Вам в течении нескольких минут!</div>
 		</form>
+	</div>
+	<div class="popup-list-wrap">
+		<div class="popup-list">
+			<img class="popup-close" src="img/@2x/close.png" alt="">
+			<div class="popup-list__top flex flex--row">
+				<div class="header-slider__subtitle">Скутеры <span class="accent-color accent-shadow">YAK<span class="down-letter">A</span>MA</span></div>
+				<div class="tabs-wrap flex flex--row">
+					<div id="popup-list-all" class="tab-btn scooter btn btn--inverse">Все модели</div>
+					<div id="popup-list-scooters" class="tab-btn btn" style="border-radius:0">Электросамокаты</div>
+					<div id="popup-list-citikokos" class="tab-btn el-scooter btn">Ситикоко</div>
+				</div>
+			</div>
+		<div id="list-all" class="list-wrap">
+			<div class="popup-list__list flex flex--row">
+				<div class="list-model flex flex--column">
+					<div class="sale-wrap">
+						<div class="sale">-25%</div>
+					</div>
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="list-scooters" class="list-wrap hidden">
+			<div class="popup-list__list flex flex--row">
+				<div class="list-model flex flex--column">
+					<div class="sale-wrap">
+						<div class="sale">-25%</div>
+					</div>
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+				<div class="list-model flex flex--column">
+					<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+					<div class="list-model__name">Электросамокат</div>
+					<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+					<div class="list-model__bottom flex flex--row">
+						<div class="list-model__price flex flex--column">
+							<div class="price-top accent-color">640 BYN</div>
+							<div class="price-bottom">1200 BYN</div>
+						</div>
+						<a href="#" class="btn btn--inverse">Выбрать</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="list-citikokos" class="list-wrap hidden">
+				<div class="popup-list__list flex flex--row">
+					<div class="list-model flex flex--column">
+						<div class="sale-wrap">
+							<div class="sale">-25%</div>
+						</div>
+						<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+						<div class="list-model__name">Электросамокат</div>
+						<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+						<div class="list-model__bottom flex flex--row">
+							<div class="list-model__price flex flex--column">
+								<div class="price-top accent-color">640 BYN</div>
+								<div class="price-bottom">1200 BYN</div>
+							</div>
+							<a href="#" class="btn btn--inverse">Выбрать</a>
+						</div>
+					</div>
+					<div class="list-model flex flex--column">
+						<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+						<div class="list-model__name">Электросамокат</div>
+						<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+						<div class="list-model__bottom flex flex--row">
+							<div class="list-model__price flex flex--column">
+								<div class="price-top accent-color">640 BYN</div>
+								<div class="price-bottom">1200 BYN</div>
+							</div>
+							<a href="#" class="btn btn--inverse">Выбрать</a>
+						</div>
+					</div>
+					<div class="list-model flex flex--column">
+						<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+						<div class="list-model__name">Электросамокат</div>
+						<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+						<div class="list-model__bottom flex flex--row">
+							<div class="list-model__price flex flex--column">
+								<div class="price-top accent-color">640 BYN</div>
+								<div class="price-bottom">1200 BYN</div>
+							</div>
+							<a href="#" class="btn btn--inverse">Выбрать</a>
+						</div>
+					</div>
+					<div class="list-model flex flex--column">
+						<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+						<div class="list-model__name">Электросамокат</div>
+						<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+						<div class="list-model__bottom flex flex--row">
+							<div class="list-model__price flex flex--column">
+								<div class="price-top accent-color">640 BYN</div>
+								<div class="price-bottom">1200 BYN</div>
+							</div>
+							<a href="#" class="btn btn--inverse">Выбрать</a>
+						</div>
+					</div>
+					<div class="list-model flex flex--column">
+						<img src="img/@1x/sc.png" alt="" class="list-model__img img-responsive">
+						<div class="list-model__name">Электросамокат</div>
+						<div class="list-model__title">AP-H008-13 (YAKAMA)</div>
+						<div class="list-model__bottom flex flex--row">
+							<div class="list-model__price flex flex--column">
+								<div class="price-top accent-color">640 BYN</div>
+								<div class="price-bottom">1200 BYN</div>
+							</div>
+							<a href="#" class="btn btn--inverse">Выбрать</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
 	</div>
 
 	<script src="js/scripts.min.js"></script>
