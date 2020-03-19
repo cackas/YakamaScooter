@@ -110,8 +110,6 @@ a, a:active, a:hover
 		margin-right: 1vw
 		&:last-child
 			margin-right: 0
-.header-wrap
-	height: 100vh
 .header-slider
 	padding: 4.1vw 0 8.2vw
 	margin: 0 4.1vw
@@ -572,6 +570,7 @@ a, a:active, a:hover
 	background-color: #fff
 	box-shadow: 0px 1vw 3.4vw rgba(1, 1, 37, 0.15)
 	padding: 4.1vw 6.9vw 4.1vw 2.78vw
+	z-index: 2
 .contact__title
 	font-family: 'MontserratSemiBold'
 	font-size: 1.25vw
@@ -960,8 +959,22 @@ a, a:active, a:hover
 		width: 100%
 	.model-slider
 		width: 100% !important
-	.models__slider-nav
+	.models__numbers
 		display: none
+	.models__slider-nav
+		position: relative
+	.left-wrap
+		position: absolute
+		top: 1vw
+		left: -37vw
+		z-index: 1
+	.right-wrap
+		position: absolute
+		top: 1vw
+		right: -37vw
+		z-index: 1
+	.left, .right
+		width: 3vw
 	.models__title
 		font-size: 5vw
 		line-height: 6.6vw
